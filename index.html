@@ -1,14 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<title>Matheus Pavanelli on GitHub</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	</head>
-	<body>
-		<div class="container">
-			<h2 class="text-center">Em construção<h2>
-		</div>
-	</body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@mspavanelli | Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        body {
+            background-color: #F7F7F7;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+        }
+        main, h1, .btn, footer {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+        }
+        main {
+            flex: 1 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            background-color: #eaecec;
+            padding: 10px 30px;
+        }
+        h1 {
+            color: #424242;
+        }
+        .btn {
+            background: #9E9E9E;
+            border: 0;
+            border-radius: 0px;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding: 5px;
+            text-decoration: none;
+            transition: .2s;
+            width: 100%;
+        }
+        .btn:hover {
+            background: #757575;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn:focus {
+            outline: 0
+        }
+        .contacts {
+            margin: auto;
+            padding: 0;
+            width: fit-content;
+        }
+        .contact {
+            list-style: none;
+        }
+        .contact a {
+            text-decoration: none;
+            color: #616161;
+        }
+        .contact a:hover {
+            color: #212121
+        }
+        .letter-space {
+            letter-spacing: 1px;
+        }
+        footer {
+            background-color: #222;     
+            color: white;
+            padding: 20px 30px;
+            text-align: center;       
+        }
+        #cover {
+            background-color: black;
+            width: 100vw;
+            height: 105vh;
+            position: absolute;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-name: fadeOut;
+        }
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="cover"></div>
+        <div class="box">
 
+            <h1>Matheus Pavanelli</h1>
+            
+            <a href="#">
+                <button class="btn">Portifólio</button>
+            </a>
+
+            <ul class="contacts">
+                <li class="contact">
+                    <a href="https://twitter.com/mateuspavanelli" target="_blank">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        @mateuspavanelli
+                    </a>
+                </li>
+                <li class="contact">
+                    <a href="https://github.com/mspavanelli" target="_blank">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                        <span class="letter-space">/</span>mspavanelli
+                    </a>
+                </li>
+                <li class="contact">
+                    <a href="#" target="_blank">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        Matheus Pavanelli
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    
+    <footer>
+        © <span id="year"></span> Matheus Pavanelli
+    </footer>
+
+    <script>
+        document.getElementById('year').innerText = new Date().getFullYear()
+        setTimeout(function() {
+            document.getElementById('cover').remove();
+        }, 1000)
+    </script>
+</body>
+</html>
